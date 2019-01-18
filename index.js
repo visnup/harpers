@@ -1,11 +1,10 @@
 const cheerio = require('cheerio')
 const fetch = require('node-fetch')
-const http = require('http')
 const https = require('https')
 const moment = require('moment')
 const tokenizer = require('sbd')
 
-let server = http.createServer((req, res) => {
+module.exports = (req, res) => {
   let date = moment().subtract(1, 'month').format('YYYY/MM'),
       lastIssue = `https://harpers.org/archive/${date}/`
 
@@ -24,7 +23,7 @@ let server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/plain' })
       res.end(results.join('\n') + '\n')
     })
-})
+}
 
 let port = process.env.PORT || 8080
 server.listen(port, () => {
