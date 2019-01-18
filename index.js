@@ -25,11 +25,6 @@ module.exports = (req, res) => {
     })
 }
 
-let port = process.env.PORT || 8080
-server.listen(port, () => {
-  console.log(`Listening on 0.0.0.0:${port}`)
-})
-
 async function request(url) {
   console.log(url)
   const agent = new https.Agent({ rejectUnauthorized: false })
