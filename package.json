@@ -10,8 +10,5 @@
     "moment": "^2.22.2",
     "node-fetch": "^2.0.0",
     "sbd": "^1.0.12"
-  },
-  "devDependencies": {
-    "nodemon": "1.18.11"
   }
 }
