@@ -7,7 +7,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "node-fetch": "^2.0.0",
+    "node-fetch": "^2.6.0",
     "sbd": "^1.0.12"
   }
 }
