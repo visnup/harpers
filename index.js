@@ -9,8 +9,8 @@ module.exports = (req, res) => {
       .then(($) => request($(".card a").attr("href")))
       .then(($) => tokenizer.sentences($(".wysiwyg-content > p").text())),
     request("https://harpers.org/harpers-index/").then(($) =>
-      $(".index-statement > p")
-        .map((i, p) => $(p).text())
+      $(".index-statement")
+        .map((_, s) => $("> p", s).text() + $("> span", s).text().trim())
         .get()
     ),
   ])
