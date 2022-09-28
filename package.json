@@ -1,13 +1,12 @@
 {
   "name": "harpers",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "author": "",
+  "main": "api/index.js",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "node-fetch": "^2.6.1",
-    "sbd": "^1.0.18"
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.2.10",
+    "sbd": "^1.0.19"
   }
 }
