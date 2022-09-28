@@ -1,5 +1,0 @@
-{
-  "version": 2,
-  "alias": "harpers.now.sh",
-  "builds": [{ "src": "index.js", "use": "@now/node" }]
-}
