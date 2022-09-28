@@ -20,6 +20,5 @@ export default async function index(req, res) {
 async function request(url) {
   console.log(url);
   const res = await fetch(url);
-  const text = await res.text();
-  return load(text);
+  return load(await res.text());
 }
