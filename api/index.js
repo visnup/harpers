@@ -9,7 +9,11 @@ export default async function index(req, res) {
       .then(($) => tokenizer.sentences($(".wysiwyg-content > p").text())),
     request("https://harpers.org/harpers-index/").then(($) =>
       $(".index-statement")
-        .map((_, s) => $("> p", s).text() + $("> span", s).text().trim())
+        .map(
+          (_, s) =>
+            $("> p", s).text() +
+            $("> span", s).text().trim().replace(/\s+/g, " ")
+        )
         .get()
     ),
   ]);
